@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Contact form</title>
+  <link rel="stylesheet" href="./styles/style.css">
+
+</head>
+<body>
+
+  <form class="principal">
+
+    <h1 class="titulo">Contact Us</h1>
+    
+    <div class="pri-nome">
+
+      <p class="pri-nome__text">Primeiro Nome</p>
+      <input type="text" required>
+      <p class="erro">This field is required</p>
+
+    </div>
+
+    <div class="ult-nome">
+
+      <p class="ult-nome__text">Ultimo Nome</p>
+      <input type="text" required>
+      <p class="erro">This field is required</p>
+
+    </div>
+
+    <div class="email">
+
+      <p class="email__text">Endereço de Email</p>
+      <input type="email" required>
+      <p class="erro-email">Please enter a valid email address</p>
+      <p class="erro">This field is required</p>
+
+    </div>
+
+    <div class="query">
+
+      <p class="query__text">Query Type</p>
+      <div class="query__input">
+        <label><input type="radio" name="enquiryType" value="generalEnquiry" required> <p>General Enquiry</p></label>
+        <label><input type="radio" name="enquiryType" value="supportRequest"> <p>Support Request</p></label>
+      </div>
+      <p class="erro">Please select a query type</p>
+
+    </div>
+
+    <div class="mensagem">
+
+      <p class="mensagem__text">Message</p>
+      <textarea rows="4" cols="50"></textarea>
+      <p class="erro">This field is required</p>
+
+    </div>
+
+    <div class="caixa">
+
+      <label class="caixa__input">
+        <input type="checkbox" required>
+        <p>I consent to being contacted by the team</p>
+      </label>
+      <p class="erro">To submit this form, please consent to being contacted</p>
+
+    </div>
+    
+    <button class="botao">Submit</button>
+    <!-- Message Sent!
+    Thanks for completing the form. We'll be in touch soon! -->
+  </form>
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>

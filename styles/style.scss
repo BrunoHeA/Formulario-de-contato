@@ -1,0 +1,139 @@
+@use './abstract/variaveis';
+@use './abstract/reset';
+
+body {
+    height: 100vh;
+    background-color: variaveis.$cor-verde-claro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: variaveis.$font-primaria;
+    font-weight: 700;
+}
+
+.principal {
+    width: 30%;
+    min-height: 80%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    padding: .5rem 1.5rem .5rem 1.5rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, .1);
+}
+
+.titulo {
+    grid-area: 1 / 1 / 2 / 3;
+    align-self: center;
+    font-size: 1.5rem;
+}
+
+.pri-nome {
+    grid-area: 2 / 1 / 3 / 2;
+    margin: 0 .5rem 0 0;
+}
+
+.ult-nome {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.email {
+    grid-area: 3 / 1 / 4 / 3;
+
+    .erro-email {
+        display: none;
+    }
+}
+
+.erro, .erro-email {
+    display: none;
+    // visibility: hidden;
+    color: variaveis.$cor-vermelho;
+    font-size: .8rem;
+}
+
+.query {
+    grid-area: 4 / 1 / 5 / 3;
+
+    &__input {
+        display: flex;
+        color: variaveis.$cor-cinza-escuro;
+        font-weight: 500;
+        font-size: .8rem;
+        gap: .5rem;
+
+        label {
+            display: flex;
+            align-items: flex-end;
+            border: 1px solid variaveis.$cor-cinza-claro;
+            border-radius: .5rem;
+            padding: .6rem 1rem;
+            width: 100%;
+        }
+    }
+}
+
+.mensagem {
+    grid-area: 5 / 1 / 7 / 3;
+
+    &__text {
+        display: flex;
+        align-items: center;
+        height: 33%;
+    }
+
+    textarea {
+        height: 67%;
+    }
+}
+
+.caixa {
+    grid-area: 7 / 1 / 8 / 3;
+
+    label {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        p {
+            color: variaveis.$cor-cinza-escuro;
+            font-size: .8rem;
+        }
+    }
+}
+
+.botao {
+    grid-area: 8 / 1 / 9 / 3;
+    color: white;
+    background-color: variaveis.$cor-verde-escuro;
+    border: none;
+    border-radius: .5rem;
+    height: 70%;
+
+    &:hover {
+        background-color: hsl(135, 88%, 16%);
+    }
+}
+
+.pri-nome, .ult-nome, .email, .query, .mensagem, .caixa {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    &__text {
+        font-size: .8rem;
+        color: variaveis.$cor-cinza-escuro;
+    }
+
+    input, textarea {
+        padding: .8rem .5rem;
+        border: 1px solid variaveis.$cor-cinza-claro;
+        border-radius: .5rem;
+
+        &:focus {
+            outline: none;
+            border-color: variaveis.$cor-verde-escuro;
+        }
+    }
+}

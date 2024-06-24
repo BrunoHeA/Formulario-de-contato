@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: hsl(148, 38%, 91%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+}
+
+.principal {
+  width: 30%;
+  min-height: 80%;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.titulo {
+  grid-area: 1/1/2/3;
+  align-self: center;
+  font-size: 1.5rem;
+}
+
+.pri-nome {
+  grid-area: 2/1/3/2;
+  margin: 0 0.5rem 0 0;
+}
+
+.ult-nome {
+  grid-area: 2/2/3/3;
+}
+
+.email {
+  grid-area: 3/1/4/3;
+}
+.email .erro-email {
+  display: none;
+}
+
+.erro, .erro-email {
+  display: none;
+  color: hsl(0, 66%, 54%);
+  font-size: 0.8rem;
+}
+
+.query {
+  grid-area: 4/1/5/3;
+}
+.query__input {
+  display: flex;
+  color: hsl(187, 24%, 22%);
+  font-weight: 500;
+  font-size: 0.8rem;
+  gap: 0.5rem;
+}
+.query__input label {
+  display: flex;
+  align-items: flex-end;
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 0.5rem;
+  padding: 0.6rem 1rem;
+  width: 100%;
+}
+
+.mensagem {
+  grid-area: 5/1/7/3;
+}
+.mensagem__text {
+  display: flex;
+  align-items: center;
+  height: 33%;
+}
+.mensagem textarea {
+  height: 67%;
+}
+
+.caixa {
+  grid-area: 7/1/8/3;
+}
+.caixa label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.caixa label p {
+  color: hsl(187, 24%, 22%);
+  font-size: 0.8rem;
+}
+
+.botao {
+  grid-area: 8/1/9/3;
+  color: white;
+  background-color: hsl(169, 82%, 27%);
+  border: none;
+  border-radius: 0.5rem;
+  height: 70%;
+}
+.botao:hover {
+  background-color: hsl(135, 88%, 16%);
+}
+
+.pri-nome, .ult-nome, .email, .query, .mensagem, .caixa {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.pri-nome__text, .ult-nome__text, .email__text, .query__text, .mensagem__text, .caixa__text {
+  font-size: 0.8rem;
+  color: hsl(187, 24%, 22%);
+}
+.pri-nome input, .pri-nome textarea, .ult-nome input, .ult-nome textarea, .email input, .email textarea, .query input, .query textarea, .mensagem input, .mensagem textarea, .caixa input, .caixa textarea {
+  padding: 0.8rem 0.5rem;
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 0.5rem;
+}
+.pri-nome input:focus, .pri-nome textarea:focus, .ult-nome input:focus, .ult-nome textarea:focus, .email input:focus, .email textarea:focus, .query input:focus, .query textarea:focus, .mensagem input:focus, .mensagem textarea:focus, .caixa input:focus, .caixa textarea:focus {
+  outline: none;
+  border-color: hsl(169, 82%, 27%);
+}/*# sourceMappingURL=style.css.map */
