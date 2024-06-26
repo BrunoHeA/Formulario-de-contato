@@ -94,7 +94,6 @@ body {
 }
 
 .erro, .erro-email {
-  display: none;
   color: hsl(0, 66%, 54%);
   font-size: 0.8rem;
 }
